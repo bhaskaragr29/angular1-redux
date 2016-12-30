@@ -1,0 +1,25 @@
+{
+    "extends": [
+        "fcn",
+        "fcn/jsdoc",
+        "plugin:flowtype/recommended"
+    ],
+    "plugins": [
+        "flowtype"
+    ],
+    "env": {
+        "browser": true,
+        "es6": true,
+        "mocha": true,
+        "jquery": true,
+        "commonjs": true
+    },
+    "globals": {
+        "angular": true,
+        "moment": true,
+        "expect": true,
+        "inject": true,
+        "_": true,
+        "chai": true
+    }
+}

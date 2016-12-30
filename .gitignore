@@ -1,0 +1,14 @@
+.idea
+.sass-cache
+node_modules
+bower_components
+vendor
+npm-debug.log
+.DS_Store
+coverage
+reports
+.tmp
+dist
+target/
+sample/templates.js
+.vscode/
