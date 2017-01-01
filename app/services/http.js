@@ -7,7 +7,6 @@ export default function httpmiddleware($http) {
         
         return $http({ method, url, params, data, headers })
             .then(res => res.data);
-            // .catch(handleError.bind(null, config));
     };
     
     return {
