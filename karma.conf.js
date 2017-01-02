@@ -15,7 +15,8 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            path.join('node_modules/babel-polyfill/dist/polyfill.js'),
+            path.join('node_modules/angular/angular.min.js'),
+            path.join('node_modules/angular-mocks/angular-mocks.js'),
             './app/index.js',
             './test/**/*.js'
         ],
