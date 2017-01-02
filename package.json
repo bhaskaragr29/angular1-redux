@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "gulp clean && gulp serve"
+    "test": "gulp test",
+    "serve": "NG_LIVERELOAD=true gulp clean && gulp serve",
+    "start": "NG_LIVERELOAD=false gulp clean && gulp serve"
   },
   "keywords": [],
   "author": "",
@@ -44,6 +45,14 @@
     "jade": "^1.11.0",
     "lodash": "^4.17.4",
     "ng-redux": "^3.4.0-beta.1",
+    "karma": "^1.7.0",
+    "karma-browserify": "^5.0.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.2",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "mocha": "^3.2.0",
     "redux": "^3.6.0",
     "redux-logger": "^2.7.4",
     "redux-thunk": "^2.2.0",

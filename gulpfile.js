@@ -15,10 +15,11 @@ var gulp = require('gulp'),
     path = require('path'),
     connect = require('gulp-connect');
     
-
+const karma = require('./gulp/karma');
 const BOOTSTRAP_PATH = './node_modules/bootstrap-sass';
 var npm = path.join('./', 'node_modules');
 
+gulp.task('karma:unit', karma.unit);
 
 gulp.task('clean', function() {
     // content
@@ -31,6 +32,10 @@ gulp.task('fonts', function() {
     (npm, 'bootstrap-sass', 'assets', 'fonts')+'/**')
         .pipe(gulp.dest('./dist/styles/fonts'));
 });
+
+gulp.task('test', [
+    'karma:unit'
+]);
 
 const sassOptions = {
     errLogToConsole: true,
@@ -110,7 +115,7 @@ gulp.task('watch',[
 gulp.task('serve', ['build','watch'], function() {
     connect.server({
         root: 'dist',
-        livereload: true,
+        livereload: process.env.NG_LIVERELOAD,
         'port':8080,
         'debug':true,
     })
