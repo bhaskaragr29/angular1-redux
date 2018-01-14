@@ -7,12 +7,12 @@ import {CONFIG} from '../config';
  */
 export default function GitHubAction($ngRedux, BaseApi) {
     
-    const loadUsers = () => dispatch => {
+    const loadUsers = (username) => dispatch => {
         
         dispatch({
             type: GITHUB_CONSTANTS.GET_GITHUB_USER_REQUEST,
         })
-        BaseApi.get({path: CONFIG.API.GITHUB.USERS})
+        BaseApi.get({path: CONFIG.API.GITHUB.USERS+(username!=null?"/"+username:"")})
         .then(data => {
             dispatch({
                 type: GITHUB_CONSTANTS.GET_GITHUB_USER_SUCCESS,

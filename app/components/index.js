@@ -1,6 +1,10 @@
+import githubComponent from './github/github';
+import searchBar from './search'
+import githubContainer from './container/githubContainer';
 
-import githubContainer from './github/github';
 
 export default angular.module('AngularTestApp.components', [])
-.component('githubContainer', githubContainer)
-.name;
+    .component('githubContainer', githubContainer)
+    .component('searchBar', searchBar)
+    .component('gitHubList', githubComponent)
+    .name;
